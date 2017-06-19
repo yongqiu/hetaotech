@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>demo</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<meta content="telephone=no" name="format-detection">
+	<meta content="email=no" name="format-detection">
+	<link rel="stylesheet" type="text/css" href="../css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../js/malihu-custom-scrollbar/jquery.mCustomScrollbar.css">
+	<link rel="stylesheet" type="text/css" href="../css/main.css">
+	<link rel="stylesheet" type="text/css" href="../css/swiper-3.3.1.min.css">
+</head>
+<body>
+<div class="page detail" style="display:block;">
+	<div class="content">
+		<div class="container">
+			<h2>案例名称</h2>
+			<h3>案例分类</h3>
+			<div class="banner">
+				<img src="../images/demo-detail-banner.jpg">
+			</div>
+			<div class="mainCon">
+				<p>测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字</p>
+				<p>测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字</p>
+				<p>测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字</p>
+				<p>测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字</p>
+				<p>测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字</p>
+			</div>
+		</div>
+	</div>
+	<div class="sidebar">
+		<a href="javascript:;" class="close"></a>
+		<div class="pagearrow">
+			<a href="page/info-detail.html" class="prev"></a>
+			<a href="page/info-detail.html" class="next"></a>
+		</div>
+		<div class="txt">
+			<h2>案例名称</h2>
+			<div class="line"></div>
+			<h3>案例分析</h3>
+			<p>反正，这里就是一大堆案例展示的介绍文字，然而我又不知道这上面到底写些什么介绍的文字好一点，所以就只有随便编一些放在上面凑一凑篇幅，让文字多一点排版也要好看一些，画面才不会太单调和枯燥，唉哟喂，想文案什么真的是好麻烦啊。</p>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/malihu-custom-scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+<script type="text/javascript" src="../js/swiper-3.3.1.min.js"></script>
+<script>
+$(function(){
+	var $detail = $('.detail');
+	$detail.find('.content').mCustomScrollbar();
+	$detail.find('.sidebar .close').on('click', function(){
+		alert('1');
+		parent.slideDemo();
+	});
+	$detail.find('.sidebar .prev').on('click', function(){
+		var href = $(this).attr('href');
+		parent.prevIframe(href);
+		return false;
+	});
+	$detail.find('.sidebar .next').on('click', function(){
+		var href = $(this).attr('href');
+		parent.nextIframe(href);
+		return false;
+	});
+});
+
+</script>
